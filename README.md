@@ -41,12 +41,12 @@ As ferramentas que iremos utilizar para realizar este teste de ransomware:
 
 ## Testes da execução do script
 
-(https://github.com/marino-ribeiro/cibersecurity-desafio-ransomware/blob/master/Imagens/img01.png)
+![Imagem 01](https://raw.githubusercontent.com/marino-ribeiro/cibersecurity-desafio-ransomware/refs/heads/master/Imagens/img01.png)
 
-(https://github.com/marino-ribeiro/cibersecurity-desafio-ransomware/blob/master/Imagens/img02.png)
+![Imagem 02](https://raw.githubusercontent.com/marino-ribeiro/cibersecurity-desafio-ransomware/refs/heads/master/Imagens/img02.png)
 
-(https://github.com/marino-ribeiro/cibersecurity-desafio-ransomware/blob/master/Imagens/img03.png)
+![Imagem 03](https://raw.githubusercontent.com/marino-ribeiro/cibersecurity-desafio-ransomware/refs/heads/master/Imagens/img03.png)
 
-(https://github.com/marino-ribeiro/cibersecurity-desafio-ransomware/blob/master/Imagens/img04.png)
+![Imagem 04](https://raw.githubusercontent.com/marino-ribeiro/cibersecurity-desafio-ransomware/refs/heads/master/Imagens/img04.png)
 
-(https://github.com/marino-ribeiro/cibersecurity-desafio-ransomware/blob/master/Imagens/img05.png)
+![Imagem 05](https://raw.githubusercontent.com/marino-ribeiro/cibersecurity-desafio-ransomware/refs/heads/master/Imagens/img05.png)
